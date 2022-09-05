@@ -14,6 +14,7 @@ bot = commands.Bot(command_prefix='WAMUU', intents=intents)
 @bot.event
 async def on_ready():
     guild = discord.utils.get(bot.guilds, name=GUILD)
+    await bot.change_presence(activity=discord.Game(name='WAMUUhelp !'))
     print(f'{bot.user.name} has connected to Discord on server {guild}(id: {guild.id})')
 
 awakenHelpText = '''Awakens the pillar men.\n
