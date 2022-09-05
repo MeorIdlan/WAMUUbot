@@ -40,7 +40,7 @@ async def awaken(ctx, *, args):
             break
 
     wamuuQuote = [
-        'The time has come. Awaken my masters',
+        'The time has come. Awaken, my masters,',
         'AYAYAYAAAAA'
     ]
     wamuuGifLink = 'https://tenor.com/view/pillar-men-awaken-my-masters-awaken-jojos-bizarre-adventure-jjba-gif-19344086'
