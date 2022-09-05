@@ -121,7 +121,7 @@ async def awaken(ctx, *, args):
 @awaken.error
 async def awakenError(ctx, error):
     if isinstance(error, commands.MissingRequiredArgument):
-        await ctx.send('You need to have a reason to wake the pillar men up or a pillar man to wake up.\nType WAMUUhelp ! for more details.')
+        await ctx.send('You need to have a reason to wake the pillar men up or a pillar man to wake up.\nType "WAMUUhelp !" for more details.')
         await ctx.send('https://tenor.com/view/anime-jotaro-jjba-jojo-yare-gif-12243323')
     else:
         await ctx.send('Something is wrong. Call Kars!')
