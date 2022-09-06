@@ -27,7 +27,7 @@ awakenHelpText = '''Awakens the pillar men.\n
                WAMUU! its time to play @Meor @Faiq\n
                WAMUU! <= this by itself is a nono.'''
 @bot.command(name='!', help=awakenHelpText)
-async def awaken(ctx, *, args): # TODO USE THE CONTEXT MORE
+async def awaken(ctx, *, args):
     newArgs = ''.join(args).split()
     hasReason = True
     if newArgs[0][0] == '<':
@@ -82,8 +82,7 @@ async def awaken(ctx, *, args): # TODO USE THE CONTEXT MORE
 
         # dming the users called
         for user in users:
-            await user.send('***The time has come. Awaken my master!***')
-            await user.send(reason)
+            await user.send(f'***The time has come. Awaken my master! Your friend {ctx.author} in {ctx.guild} has called for you:***\n{reason}')
             await user.send(wamuuGifLink)
     # if the arguments only included a reason
     elif not hasUser and hasReason:
@@ -115,7 +114,7 @@ async def awaken(ctx, *, args): # TODO USE THE CONTEXT MORE
 
         # dming the users called
         for user in users:
-            await user.send('***The time has come. Awaken my master!***')
+            await user.send(f'***The time has come. Awaken my master! Your friend {ctx.author} in {ctx.guild} has called for you:***')
             await user.send(wamuuGifLink)
 
 @awaken.error
