@@ -114,7 +114,7 @@ async def awaken(ctx, *, args):
 
         # dming the users called
         for user in users:
-            await user.send(f'***The time has come. Awaken my master! Your friend {ctx.author} in {ctx.guild} has called for you:***')
+            await user.send(f'***The time has come. Awaken my master! Your friend {ctx.author} in {ctx.guild} has called for you!***')
             await user.send(wamuuGifLink)
 
 @awaken.error
