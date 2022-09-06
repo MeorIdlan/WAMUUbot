@@ -27,7 +27,7 @@ awakenHelpText = '''Awakens the pillar men.\n
                WAMUU! its time to play @Meor @Faiq\n
                WAMUU! <= this by itself is a nono.'''
 @bot.command(name='!', help=awakenHelpText)
-async def awaken(ctx, *, args):
+async def awaken(ctx, *, args): # TODO USE THE CONTEXT MORE
     newArgs = ''.join(args).split()
     hasReason = True
     if newArgs[0][0] == '<':
